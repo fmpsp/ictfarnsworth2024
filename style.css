@@ -8,6 +8,7 @@
     --margin-xxl: 2.5rem;
     --nav-bg-color: #b70000;
     --nav-color: #fff;
+    --header-glow: #ff1414;
     --background-1: #044999;
     --background-2: #002f62;
 }
@@ -53,7 +54,6 @@ nav {
     background: var(--nav-bg-color);
     position: relative;
     height: 70px;
-    color: var();
     font-family: "Knockout Featherweight";
 }
 
@@ -103,6 +103,8 @@ nav ul li a {
 .menu-icon i{
     color: #fff;
     font-size: 30px;
+    position: relative;
+    bottom: 5px;
 }
 
 .search-icon i{
@@ -119,6 +121,7 @@ nav ul li a {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px; 
     background: var(--background-1);
+    text-shadow: 2px 4px 20px #222;
 }
 
 .active-page a {
@@ -131,19 +134,188 @@ nav ul li a {
     border-bottom: 5px solid #fff;
 }
 
-.header, .section-1 {
+.header, .index-section-1 {
     font-family: "Anton Regular";
-    color: var(--nav-color);
+    color: #fff;
 }
 
 .header {
     text-align: center;
     font-size: 5vw;
     padding: 25px;
-    text-shadow: 0 0 50px #FF0000;
+    text-shadow: 0 0 50px var(--header-glow);
 }
 
-.section-1 {
+.index-section-1 {
+    display: flex;
     background: var(--background-2);
+    flex-direction: column;
+}
+
+.index-section-1-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    gap: 20px;
+    margin: 4vh 0;
+}
+
+.index-welcome-bigger-h2 {
+    font-size: 5vw;
+    text-shadow: 0 0 30px var(--header-glow),  0 0 10px rgb(208, 211, 255);
+}
+
+.index-welcome-smaller-h2 {
+    font-size: 2vw;
+    white-space: pre-line;
+    width: 5vw;
+    font-style: italic;
+    text-shadow: 0 0 15px var(--header-glow), 0 0 10px rgb(97, 105, 217);   
+}
+
+.index-section-1-image-track img{
+    width: 80%;
+    max-width: 444px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.index-section-1-image-track {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 0 4vh 0;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+.index-section-1-image-track:after {
+    content: "";
+    width: 444px;
+}
+
+@media (max-width: 970px) {
+
+    nav {
+        height: 48px;
+    }
+
+    nav ul li {
+        margin: var(--margin-m);
+    }
+
+    nav ul li a, .search-icon i {
+        font-size: 30px;
+    }
+
+    .space2 {
+        border-bottom: 4px solid #fff;
+    }
+
+    .active-page {
+        border-top: 4px solid #fff;
+        border-left: 4px solid #fff;
+        border-right: 4px solid #fff;
+    }
+
+    .logo-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo {
+        display: block;
+    }
+}
+
+@media (max-width: 850px) {
+
+        nav {
+            height: 38px;
+        }
+
+        nav ul li a, .search-icon i {
+            font-size: 20px;
+        }
+
+        .space2 {
+            border-bottom: 4px solid #fff;
+        }
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        height: 48px;
+    }
+
+    .menu-icon {
+        display: initial;
+    }
+
+    .search-icon {
+        display: none;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 48px;
+        left: 0px;
+        background-color: var(--nav-bg-color);
+        gap: 0px;
+    }
+
+    nav ul.active {
+        display: flex;
+        margin: 0;
+        border-bottom: 3px solid #fff;
+    }
+
+    nav ul li {
+        margin: 10px 0px;
+        text-align: center;
+    }
+
+    .active-page {
+        border: 3px solid #fff;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0; 
+        background: var(--background-1);
+        text-shadow: 2px 4px 20px #222;
+    }
+
+    .index-section-1-header {
+        margin: 2vh 0;
+    }
+}
+
+@media (max-width: 720px) {
+
+    nav {
+        height: 36px;
+    }
+
+    nav ul li a, .search-icon i, .menu-icon i {
+        font-size: 20px;
+    }
+
+    nav ul {
+        top: 40px;
+    }
+
+    .space2 {
+        border-bottom: 3px solid #fff;
+    }
+
+    .logo-circle {
+        width: 50px;
+        height: 50px;
+    }
 }
