@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <style>  
+    </style>
     <script src="https://kit.fontawesome.com/5c671290dc.js" crossorigin="anonymous"></script>
     <title>Welcome to 12 ICT - Farnsworth!</title>
 </head>
@@ -20,7 +22,7 @@
                     <li class="active-page"><a href="index.html">HOME</a></li>
                     <li><a href="html/about.html">ABOUT</a></li>
                     <li><a href="html/students.html">STUDENTS</a></li>
-                    <li><a href="html/contact.html1">CONTACT</a></li>
+                    <li><a href="html/contact.html">CONTACT</a></li>
                 </ul>
                 <div class="menu-icon">
                     <i class="fa-solid fa-bars"></i>
@@ -36,9 +38,26 @@
             <h1>12 ICT - FARNSWORTH</h1>
         </div>
 
-        <!-- <div class="section-1">
-            <span>WELCOME</span><span>to our website!</span>
-        </div> -->
+        <div class="index-section-1">
+            <div class="index-section-1-header">
+                <p class="index-welcome-bigger-h2">WELCOME</p><p class="index-welcome-smaller-h2">to our website!</p>
+            </div>
+            <div class="index-section-1-image-track">
+                <img src="img/Picture6.jpg" alt="">
+                <img src="img/Picture7.jpg" alt="">
+                <img src="img/Picture8.jpg" alt="">
+            </div>
+        </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-icon');
+            const navLinks = document.querySelector('.nav-list');
+
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
