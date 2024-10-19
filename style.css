@@ -1,0 +1,149 @@
+:root {
+    --margin-xxs: .25rem;
+    --margin-xs: .5rem;
+    --margin-s: .75rem;
+    --margin-m: 1rem;
+    --margin-l: 1.25rem;
+    --margin-xl: 1.75rem;
+    --margin-xxl: 2.5rem;
+    --nav-bg-color: #b70000;
+    --nav-color: #fff;
+    --background-1: #044999;
+    --background-2: #002f62;
+}
+
+@font-face {
+    font-family: "Knockout Featherweight";
+    src: url("/fonts/Knockout-HTF48-Featherweight.ttf");
+}
+
+@font-face {
+    font-family: "Anton Regular";
+    src: url("/fonts/Anton-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: var(--background-1);
+}
+
+
+.view {
+    display: flex;
+    flex-direction: column;
+}
+
+.space {
+    background: var(--nav-bg-color);
+    height: 20px;
+}
+
+nav {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--nav-bg-color);
+    position: relative;
+    height: 70px;
+    color: var();
+    font-family: "Knockout Featherweight";
+}
+
+.logo-circle {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    bottom: 5px;
+}
+
+.logo {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
+nav ul {
+    margin: 0px 30px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+nav ul li {
+    flex: 1;
+    /* border-left: 5px solid #fff; */
+    /* border-right: 3px solid #fff; */
+    padding: var(--margin-l);
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--nav-color);
+    font-size: 50px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu-icon i{
+    color: #fff;
+    font-size: 30px;
+}
+
+.search-icon i{
+    color: var(--nav-color);
+    font-size: 70px;
+    position: relative;
+    bottom: 5px;
+}
+
+.active-page {
+    border-top: 5px solid #fff;
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px; 
+    background: var(--background-1);
+}
+
+.active-page a {
+    color: #fff;
+}
+
+.space2 {
+    background: var(--nav-bg-color);
+    height: 13px;
+    border-bottom: 5px solid #fff;
+}
+
+.header, .section-1 {
+    font-family: "Anton Regular";
+    color: var(--nav-color);
+}
+
+.header {
+    text-align: center;
+    font-size: 5vw;
+    padding: 25px;
+    text-shadow: 0 0 50px #FF0000;
+}
+
+.section-1 {
+    background: var(--background-2);
+    text-align: center;
+}
