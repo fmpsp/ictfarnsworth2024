@@ -94,6 +94,7 @@
     left: 50%;
     height: 44vw;
     border-right: 5px solid #fff;
+    z-index: 0;
 }
 
 .index-section-2-cleaners {
@@ -141,18 +142,16 @@
     color: var(--nav-bg-color);
 }
 
+.tg .table-of {
+    vertical-align: top;
+}
+
 @media (max-width: 860px) {
     .tg td, .tg th {
         border: 1px solid black;
     }
 
     .index-section-2-cleaners:before {
-        align-self: center;
-        content: "";
-        position: absolute;
-        left: 50%;
-        height: 44vw;
         border-right: 2px solid #fff;
     }
-
 }
