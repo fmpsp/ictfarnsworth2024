@@ -9,7 +9,7 @@
     --nav-bg-color: #b70000;
     --nav-color: #fff;
     --header-glow: #ff1414;
-    --background-1: #044999;
+    --background-1: #014a9c;
     --background-2: #002f62;
 }
 
@@ -134,7 +134,7 @@ nav ul li a {
     border-bottom: 5px solid #fff;
 }
 
-.header, .index-section-1 {
+.header {
     font-family: "Anton Regular";
     color: #fff;
 }
@@ -143,7 +143,7 @@ nav ul li a {
     text-align: center;
     font-size: 5vw;
     padding: 25px;
-    text-shadow: 0 0 50px var(--header-glow);
+    text-shadow: 0 0 50px var(--header-glow),  0 0 30px rgb(0, 0, 0);
 }
 
 @media (max-width: 970px) {

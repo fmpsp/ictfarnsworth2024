@@ -23,6 +23,11 @@
     src: url("/fonts/Anton-Regular.ttf");
 }
 
+ .index-section-1, .index-section-2-header {
+    font-family: "Anton Regular";
+    color: #fff;
+}
+
 .index-section-1 {
     display: flex;
     background: var(--background-2);
@@ -68,4 +73,86 @@
     height: auto;
     margin: 0 auto;
     gap: 1vw;
+}
+
+.index-section-2 {
+    display: flex;
+    flex-direction: row;
+    padding: 2vw 0;
+}
+
+.index-section-2-announcements {
+    height: 44vw;
+    width: 50%;
+    /* border-right: 5px solid #fff; */
+}
+
+.index-section-2-cleaners:before {
+    align-self: center;
+    content: "";
+    position: absolute;
+    left: 50%;
+    height: 44vw;
+    border-right: 5px solid #fff;
+}
+
+.index-section-2-cleaners {
+    height: 44vw;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.index-section-2-header {
+    text-align: center;
+    font-size: 1.5vw;
+    font-style: italic;
+    text-shadow: 0 0 15px var(--header-glow), 0 0 10px rgb(0, 0, 0);
+    color: #fab1b1;
+    letter-spacing: 0.1em;
+}
+
+.tg  {
+    font-family: "Knockout Featherweight";
+    font-size: 1.5vw;
+    margin: 2vw;
+    background: white;
+    flex: 2;
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+.tg td {
+    border: 3px solid black;
+    padding: .75vw .25vw;
+    word-break:normal;
+}
+
+.tg th {
+    border: 3px solid black;
+    font-weight:normal;
+    padding: .75vw .25vw;
+    text-align: left;
+}
+
+.tg .table-day {
+    font-size: 2vw;
+    text-align:center;
+    color: var(--nav-bg-color);
+}
+
+@media (max-width: 860px) {
+    .tg td, .tg th {
+        border: 1px solid black;
+    }
+
+    .index-section-2-cleaners:before {
+        align-self: center;
+        content: "";
+        position: absolute;
+        left: 50%;
+        height: 44vw;
+        border-right: 2px solid #fff;
+    }
+
 }
