@@ -6,11 +6,11 @@
     --margin-l: 1.25rem;
     --margin-xl: 1.75rem;
     --margin-xxl: 2.5rem;
-    --nav-bg-color: #146840;
-    --nav-color: #ffcd00;
-    --header-glow: #0e9252;
-    --background-1: #b24700;
-    --background-2: #7a380f;
+    --nav-bg-color: #ffcd00;
+    --nav-color: #360062;
+    --header-glow: #ffcd00;
+    --background-1: #732bab;
+    --background-2: #370062;
 }
 
 @font-face {
@@ -23,16 +23,6 @@
     src: url("/fonts/Anton-Regular.ttf");
 }
 
-.contact-page:before {
+.about-page:before, .students-page:before {
     display: none;
-}
-
-@media (max-width: 768px) {
-    nav ul.active {
-        border-bottom: none;
-    }
-
-    .active-page {
-        margin: 10px 0 0 0;
-    }
 }

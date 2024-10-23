@@ -89,7 +89,19 @@ nav ul li {
     padding: var(--margin-l);
     list-style-type: none;
     text-align: center;
+    position: relative;
 }
+
+.about-page:before, .contact-page:before, .students-page:before {
+    content:"";
+    color: white;
+    position: absolute;
+    height: 8.5vh;
+    width: 3px;
+    background: white;
+    top: 5px;
+    left: -1.5vw;
+}   
 
 nav ul li a {
     text-decoration: none;
@@ -162,6 +174,13 @@ nav ul li a {
         font-size: 30px;
     }
 
+    .about-page:before, .contact-page:before, .students-page:before {
+        height: 6vh;
+        width: 2px;
+        top: 8px;
+        left: -3.5vw;
+    }   
+
     .space2 {
         border-bottom: 4px solid #fff;
     }
@@ -191,6 +210,11 @@ nav ul li a {
         nav ul li a, .search-icon i {
             font-size: 20px;
         }
+
+        .about-page:before, .contact-page:before, .students-page:before {
+            height: 5vh;
+            left: -4vw;
+        }   
 
         .space2 {
             border-bottom: 4px solid #fff;

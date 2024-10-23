@@ -23,6 +23,12 @@
     src: url("/fonts/Anton-Regular.ttf");
 }
 
+/* Nav */
+
+.about-page:before {
+    display: none;
+}
+
 /* Section 1 */
 
 .index-section-1, .index-section-2-header, .index-section-3-header {
@@ -294,6 +300,12 @@
 
 .index-sched-container-2 .table-sched {
     border: 4px dashed #fff;
+}
+
+@media (max-width: 970px) {
+    /* .about-page:before {
+        display: initial;
+    } */
 }
 
 @media (max-width: 860px) {
