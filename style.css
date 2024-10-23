@@ -265,6 +265,10 @@ nav ul li a {
         text-shadow: 2px 4px 20px #222;
     }
 
+    .about-page:before, .contact-page:before, .students-page:before {
+        display: none;
+    }   
+
 }
 
 @media (max-width: 720px) {
