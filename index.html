@@ -71,6 +71,9 @@
 
                 <div class="announcements">
                     <img src="img/notepad.png" alt="" draggable="false">
+                    <div class="annc-text">
+                        <span id="annc-text"></span>
+                    </div>
                 </div>
 
             </div>
@@ -226,6 +229,18 @@
                 navLinks.classList.toggle('active');
             });
         });
+        (function(){
+            (async () => {
+              const announcement = document.getElementById("annc-text");
+
+              try {
+                const resp = await fetch(`ann/announcement.txt`);
+                if (!resp.ok) throw null;
+                announcement.innerText = await resp.text();
+              } catch {
+                announcement.innerHTML = bigUwu.textContent;
+              }  
+            })()})();
     </script>
 </body>
 </html>

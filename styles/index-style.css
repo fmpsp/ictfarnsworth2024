@@ -140,6 +140,7 @@
     width: 100%;
     height: 90%;
     padding: 1vw 4vw 0 4vw;
+    position: relative;
 }
 
 .announcements img {
@@ -152,6 +153,24 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+.annc-text {
+    font-family: "Knockout Featherweight";
+    letter-spacing: .05em;
+    position: absolute;
+    height: 31vw;
+    width: 24vw;
+    top: 6vw;
+    left: 13vw;
+    font-size: 2vw;
+    padding: 0 .5vw 0 0;
+    overflow-y: scroll;
+}
+
+#annc-text {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
 }
 
 .index-section-2-cleaners:before {
