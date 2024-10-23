@@ -26,3 +26,19 @@
 .about-page:before, .students-page:before {
     display: none;
 }
+
+.about-section-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3vw;
+}
+
+.about-section-1 h2 {
+    font-family: "Anton Regular";
+    color: var(--nav-bg-color);
+    text-shadow: 2px 4px 20px #222;
+    font-style: italic;
+    font-size: 5vw;
+    text-align: center;
+}

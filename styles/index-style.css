@@ -130,6 +130,23 @@
 .index-section-2-announcements {
     height: 44vw;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+.announcements{
+    width: 100%;
+    height: 90%;
+    padding: 1vw 4vw 0 4vw;
+}
+
+.announcements img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
 }
 
 .index-section-2-cleaners:before {
