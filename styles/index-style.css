@@ -143,11 +143,23 @@
     position: relative;
 }
 
-.announcements img {
+.notepad {
     display: block;
     margin-left: auto;
     margin-right: auto;
     height: 100%;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.index-cursor {
+    position: absolute;
+    height: 10%;
+    top: 20vw;
+    left: 37vw;
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
