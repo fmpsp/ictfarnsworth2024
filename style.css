@@ -155,8 +155,8 @@ nav ul li a {
 
 .header {
     text-align: center;
-    font-size: 5vw;
-    padding: 25px;
+    font-size: 4vw;
+    padding: 2vw;
     text-shadow: 0 0 50px var(--header-glow),  0 0 30px rgb(0, 0, 0);
 }
 
