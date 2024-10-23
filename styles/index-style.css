@@ -147,6 +147,11 @@
     margin-left: auto;
     margin-right: auto;
     height: 100%;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .index-section-2-cleaners:before {
