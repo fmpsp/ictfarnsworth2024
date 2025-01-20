@@ -3,245 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="12 ICT - Farnsworth Batch 2024-2025 Official Website" property="og:site_name" />
-    <meta content="The official website for TSC's 12 ICT - Farnsworth Batch 2024-2025!" property="og:description" />
-    <meta content="https://ictfarnsworth2024.top/" property="og:url" />
-    <meta content="https://ictfarnsworth2024.top/img/logo.png" property="og:image" />
-    <meta content="#044999" data-react-helmet="true" name="theme-color" />
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="nav-style.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles/index-style.css">
-    <style>  
-    </style>
-    <script src="https://kit.fontawesome.com/5c671290dc.js" crossorigin="anonymous"></script>
-    <title>Welcome to 12 ICT - Farnsworth!</title>
+    <title>TSC ICT Farnsworth</title>
 </head>
 <body>
-    <div class="view">
-        <div class="nav-container">
-            <div class="space"></div>
-            <nav>
-                <div class="logo-circle">
-                    <img src="img/logo.png" class="logo" alt="Logo">
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="#" class="nav__logo">
+                    <i class="ri-terminal-box-line"></i> ICT 12 - FARNSWORTH
+                </a>
+                <div class="nav__toggle" id="nav__toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
                 </div>
-                <ul class="nav-list">
-                    <li class="home-page active-page"><a href="index.html">HOME</a></li>
-                    <li class="about-page"><a href="html/about.html">ABOUT</a></li>
-                    <li class="students-page"><a href="html/students.html">STUDENTS</a></li>
-                    <li class="contact-page"><a href="html/contact.html">CONTACT</a></li>
+            </div>
+            <!-- menu -->
+             <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <!-- dropdown -->
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            Batch <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-calendar-2-line"></i> 2025
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-calendar-schedule-line"></i> 2026
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            Projects <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-pages-line"></i> E-Portfolio
+                                </a>
+                            </li>
+                            <!-- dropdown submenu -->
+                            <li class="dropdown__subitem">
+                                <div class="dropdown__link">
+                                    <i class="ri-gamepad-line"></i> Games <i class="ri-add-line dropdown__add"></i>
+                                </div>
+
+                                <ul class="dropdown__submenu">
+                                    <li>
+                                        <a href="#" class="dropdown__sublink">
+                                            <i class="ri-file-3-fill"></i> Drama
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown__sublink">
+                                            <i class="ri-file-3-fill"></i> Horror
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown__sublink">
+                                            <i class="ri-file-3-fill"></i> Action
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#" class="nav__link">About</a></li>
+
                 </ul>
-                <div class="menu-icon">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-                <div class="search-icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-            </nav>
-            <div class="space2"></div>
-        </div>
-        
-        <div class="header">
-            <h1>12 ICT - FARNSWORTH</h1>
-        </div>
-
-        <div class="index-section-1">
-            <div class="index-section-1-header">
-                <div class="heart-left-container">
-                    <img class="heart-left heart-big" src="img/heart-sprite.png" alt=""><img class="heart-left heart-small reverse"  src="img/heart-sprite.png" alt="">
-                </div>
-                <p class="index-welcome-bigger-h2">WELCOME</p><p class="index-welcome-smaller-h2">to our website!</p>
-                <div class="heart-right-container">
-                    <img class="heart-right heart-small" src="img/heart-sprite.png" alt=""><img class="heart-right heart-big reverse" src="img/heart-sprite.png" alt="">
-                </div>
-            </div>
-            <div class="index-section-1-image-track">
-                <img src="img/Picture6.jpg" alt="">
-                <img src="img/Picture7.jpg" alt="">
-                <img src="img/Picture8.jpg" alt="">
-            </div>
-        </div>
-
-        <div class="index-section-2">
-
-            <div class="index-section-2-announcements">
-
-                <div class="index-section-2-header">
-                    <h2>IMPORTANT ANNOUNCEMENTS:</h2>
-                </div>
-
-                <div class="announcements">
-                    <img class="notepad" src="img/notepad.png" alt="" draggable="false">
-                    <img class="index-cursor" src="img/cursor.png" alt="" draggable="false">
-                    <div class="annc-text">
-                        <span id="annc-text"></span>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="index-section-2-cleaners">
-
-                <div class="index-section-2-header">
-                    <h2>LIST OF CLEANERS:</h2>
-                </div>
-
-                <table class="tg">
-                    <thead>
-                        <tr>
-                        <th class="table-day">MON</th>
-                        <th class="table-items">DALAGUIT, TILA, GARCIA, MELO,</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <td class="table-day"></td>
-                        <td class="table-items table-of">MARCELINO, AGUSTIN, PACHO</td>
-                        </tr>
-                        <tr>
-                        <td class="table-day">TUE</td>
-                        <td class="table-items">BEA, CO, RIDO, MATOTO, RAVELO</td>
-                        </tr>
-                        <tr>
-                        <td class="table-day"></td>
-                        <td class="table-items table-of">LUCENA, PILLADO</td>
-                        </tr>
-                        <tr>
-                        <td class="table-day">WED</td>
-                        <td class="table-items">LATOZA, VERANGO, BAUSIN, BASILIO</td>
-                        </tr>
-                        <tr>
-                        <td class="table-day"></td>
-                        <td class="table-items table-of">CABALPIN, BALLOS, SALCEDO</td>
-                        </tr>
-                        <tr>
-                        <td class="table-day">THU</td>
-                        <td class="table-items">ALABADO, CAMELLO, CRISTOBAL</td>
-                        </tr>
-                        <tr>
-                        <td class="table-day"></td>
-                        <td class="table-items table-of">SEBADO, GACULA, SERNA, OCENA</td>
-                        </tr>
-                        <tr>
-                        <td class="table-day">FRI</td>
-                        <td class="table-items">BURANDAY, PORTERIA, VIDAL, CERANTES</td>
-                        </tr>
-                        <tr>
-                        <td class="table-day"></td>
-                        <td class="table-items table-of">VALENTINO, MASSUCCO, FLORDELIZA</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="index-section-3">
-            <div class="index-1st-sem-sched">
-                <div class="index-section-3-header">
-                    <h2>1ST SEMESTER SCHEDULE &amp; SUBJECT TEACHERS</h2>
-                </div>
-                <div class="index-sched-container-1">
-                    <img src="img/sem1schedule.png" alt="">
-                    <table class="table-sched">
-                        <thead>
-                            <tr>
-                            <td class="table-subject">CPAR:</td>
-                            <td class="table-teacher">Sir Aikcel</td>
-                            <td class="table-subject">EAPP:</td>
-                            <td class="table-teacher">Miss Eunice</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <td class="table-subject">WEBDEV 2 (CSS):</td>
-                            <td class="table-teacher">Sir Jazzer</td>
-                            <td class="table-subject">PR 2:</td>
-                            <td class="table-teacher">Sir Elton</td>
-                            </tr>
-                            <tr>
-                            <td class="table-subject">OOP 1 (JAVA):</td>
-                            <td class="table-teacher">Sir Jazzer</td>
-                            <td class="table-subject">PHILOSOPHY:</td>
-                            <td class="table-teacher">Sir Dan</td>
-                            </tr>
-                            <tr>
-                            <td class="table-subject">PERDEV:</td>
-                            <td class="table-teacher">Miss Vanessa</td>
-                            <td class="table-subject">P.E. &AMP; HEALTH 3:</td>
-                            <td class="table-teacher">Miss Mavic</td>
-                            </tr>
-                            <tr>
-                            <td class="table-subject">UCSP:</td>
-                            <td class="table-teacher">Miss Kristelle</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="index-2nd-sem-sched">
-                <div class="index-section-3-header">
-                    <h2>2ND SEMESTER SCHEDULE &amp; SUBJECT TEACHERS</h2>
-                </div>
-                <div class="index-sched-container-2">
-                    <table class="table-sched">
-                        <thead>
-                            <tr>
-                            <td class="table-subject">CPAR:</td>
-                            <td class="table-teacher">Sir Aikcel</td>
-                            <td class="table-subject">EAPP:</td>
-                            <td class="table-teacher">Miss Eunice</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <td class="table-subject">WEBDEV 2 (CSS):</td>
-                            <td class="table-teacher">Sir Jazzer</td>
-                            <td class="table-subject">PR 2:</td>
-                            <td class="table-teacher">Sir Elton</td>
-                            </tr>
-                            <tr>
-                            <td class="table-subject">OOP 1 (JAVA):</td>
-                            <td class="table-teacher">Sir Jazzer</td>
-                            <td class="table-subject">PHILOSOPHY:</td>
-                            <td class="table-teacher">Sir Dan</td>
-                            </tr>
-                            <tr>
-                            <td class="table-subject">PERDEV:</td>
-                            <td class="table-teacher">Miss Vanessa</td>
-                            <td class="table-subject">P.E. &AMP; HEALTH 3:</td>
-                            <td class="table-teacher">Miss Mavic</td>
-                            </tr>
-                            <tr>
-                            <td class="table-subject">UCSP:</td>
-                            <td class="table-teacher">Miss Kristelle</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="blank-sched"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.querySelector('.menu-icon');
-            const navLinks = document.querySelector('.nav-list');
-
-            menuToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-        });
-        (function(){
-            (async () => {
-              const announcement = document.getElementById("annc-text");
-
-              try {
-                const resp = await fetch(`ann/announcement.txt`);
-                if (!resp.ok) throw null;
-                announcement.innerText = await resp.text();
-              } catch {
-                announcement.innerHTML = bigUwu.textContent;
-              }  
-            })()})();
-    </script>
+             </div>
+        </nav>
+    </header>
+    
 </body>
 </html>

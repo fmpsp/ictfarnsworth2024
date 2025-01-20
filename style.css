@@ -1,296 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Palanquin:wght@100;200;300;400;500;600;700&family=Signika:wght@300..700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css');
+
 :root {
-    --margin-xxs: .25rem;
-    --margin-xs: .5rem;
-    --margin-s: .75rem;
-    --margin-m: 1rem;
-    --margin-l: 1.25rem;
-    --margin-xl: 1.75rem;
-    --margin-xxl: 2.5rem;
-    --nav-bg-color: #b70000;
-    --nav-color: #fff;
-    --header-glow: #ff1414;
-    --background-1: #014a9c;
-    --background-2: #002f62;
-}
+    --header-height: 2.5rem;
 
-@font-face {
-    font-family: "Knockout Featherweight";
-    src: url("/fonts/Knockout-HTF48-Featherweight.ttf");
-}
+    /* colors */
 
-@font-face {
-    font-family: "Anton Regular";
-    src: url("/fonts/Anton-Regular.ttf");
-}
+    --dark-blue: #001427;
+    --firebrick: #780000;
+    --firebrick-dark: #8d0801;
+    --firebrick-darken: #540b0e;
+    --off-white: #edf0f1;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    /* font */
 
-html, body {
-    height: 100%;
-    width: 100%;
-    background: var(--background-2);
+    --nav-font: "Signika", serif;   
+    --normal-font-size: .938rem;
+    --font-regular: 400;
+    --font-semibold: 600;
+
+    /* z index */
+
+    --z-tooltip: 10;
+    --z-fixed: 60;
 }
 
 
-.view {
-    display: flex;
-    flex-direction: column;
-}
-
-.space {
-    background: var(--nav-bg-color);
-    height: 20px;
-}
-
-nav {
-    padding: 10px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--nav-bg-color);
-    position: relative;
-    height: 70px;
-    font-family: "Knockout Featherweight";
-}
-
-.logo-circle {
-    width: 80px;
-    height: 80px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    bottom: 5px;
-}
-
-.logo {
-    display: inline;
-    margin: 0 auto;
-    height: 100%;
-    width: auto;
-}
-
-nav ul {
-    margin: 0px 30px;
-    flex-grow: 1;
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
-    z-index: 1;
-}
-
-nav ul li {
-    flex: 1;
-    /* border-left: 5px solid #fff; */
-    /* border-right: 3px solid #fff; */
-    padding: var(--margin-l);
-    list-style-type: none;
-    text-align: center;
-    position: relative;
-}
-
-.about-page:before, .contact-page:before, .students-page:before {
-    content:"";
-    color: white;
-    position: absolute;
-    height: 8.5vh;
-    width: 3px;
-    background: white;
-    top: 5px;
-    left: -1.5vw;
-}   
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--nav-color);
-    font-size: 50px;
-}
-
-.menu-icon {
-    display: none;
-}
-
-.menu-icon i{
-    color: #fff;
-    font-size: 30px;
-    position: relative;
-    bottom: 5px;
-}
-
-.search-icon i{
-    color: var(--nav-color);
-    font-size: 70px;
-    position: relative;
-    bottom: 5px;
-}
-
-.active-page {
-    border-top: 5px solid #fff;
-    border-left: 5px solid #fff;
-    border-right: 5px solid #fff;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px; 
-    background: var(--background-1);
-    text-shadow: 2px 4px 20px #222;
-}
-
-.active-page a {
-    color: #fff;
-}
-
-.space2 {
-    background: var(--nav-bg-color);
-    height: 13px;
-    border-bottom: 5px solid #fff;
-}
-
-.header {
-    font-family: "Anton Regular";
-    color: #fff;
-    background: var(--background-1);
-}
-
-.header {
-    text-align: center;
-    font-size: 4vw;
-    padding: 2vw;
-    text-shadow: 0 0 50px var(--header-glow),  0 0 30px rgb(0, 0, 0);
-}
-
-@media (max-width: 970px) {
-
-    nav {
-        height: 48px;
-    }
-
-    nav ul li {
-        margin: var(--margin-m);
-    }
-
-    nav ul li a, .search-icon i {
-        font-size: 30px;
-    }
-
-    .about-page:before, .contact-page:before, .students-page:before {
-        height: 6vh;
-        width: 2px;
-        top: 8px;
-        left: -3.5vw;
-    }   
-
-    .space2 {
-        border-bottom: 4px solid #fff;
-    }
-
-    .active-page {
-        border-top: 4px solid #fff;
-        border-left: 4px solid #fff;
-        border-right: 4px solid #fff;
-    }
-
-    .logo-circle {
-        width: 50px;
-        height: 50px;
-    }
-
-    .logo {
-        display: block;
-    }
-}
-
-@media (max-width: 850px) {
-
-        nav {
-            height: 38px;
-        }
-
-        nav ul li a, .search-icon i {
-            font-size: 20px;
-        }
-
-        .about-page:before, .contact-page:before, .students-page:before {
-            height: 5vh;
-            left: -4vw;
-        }   
-
-        .space2 {
-            border-bottom: 4px solid #fff;
-        }
-}
-
-@media (max-width: 768px) {
-
-    nav {
-        height: 36px;
-    }
-
-    .menu-icon {
-        display: initial;
-    }
-
-    .search-icon {
-        display: none;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 40px;
-        left: 0px;
-        background-color: var(--nav-bg-color);
-        gap: 0;
-    }
-
-    nav ul.active {
-        display: flex;
-        margin: 0;
-        border-bottom: 3px solid #fff;
-    }
-
-    nav ul li {
-        margin: 10px 0px;
-        text-align: center;
-    }
-
-    .active-page {
-        border: 3px solid #fff;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0; 
-        background: var(--background-1);
-        text-shadow: 2px 4px 20px #222;
-    }
-
-    .about-page:before, .contact-page:before, .students-page:before {
-        display: none;
-    }   
-
-}
-
-@media (max-width: 720px) {
-
-    nav {
-        height: 36px;
-    }
-
-    /* nav ul li a, .search-icon i, .menu-icon i {
-        font-size: 20px;
-    } */
-
-    nav ul {
-        top: 40px;
-    }
-
-    .space2 {
-        border-bottom: 3px solid #fff;
-    }
-
-    .logo-circle {
-        width: 50px;
-        height: 50px;
-    }
+body {
+    background-color: var(--dark-blue);
 }
