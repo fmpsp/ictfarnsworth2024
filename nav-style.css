@@ -3,29 +3,33 @@
 
 /* var */
 
+@font-face {
+    font-family: "Knockout Featherweight";
+    src: url("legacy/fonts/Knockout-HTF48-Featherweight.ttf");
+}
+
 :root {
     --header-height: 2.5rem;
 
     /* colors */
-
-    --dark-blue: #0F172A;
-    --teal-cyan: #0ac5f8;
-    --firebrick: #B31B1B;
-    --firebrick-dark: #a2211c;
-    --firebrick-darken: #9a2121;
+    --background-color: #001427;
+    --alt-color: #0ac5f8;
+    --nav-background: #B31B1B;
+    --nav-background-dark: #a2211c;
+    --nav-background-darken: #9a2121;
+    --nav-scrolled: #111;
     --off-white: #edf0f1;
 
     /* font */
-
-    --nav-font: "Signika", serif;
-    --normal-font-size: .938rem;
+    --nav-font: "Knockout Featherweight", serif;
+    --normal-font-size: 1.25rem;
     --font-regular: 400;
     --font-semibold: 600;
 
     /* z index */
-
     --z-tooltip: 10;
     --z-fixed: 60;
+
 }
 
 /* base */
@@ -58,14 +62,19 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--firebrick);
-    box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
+    background-color:  var(--nav-background);
+    /* box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3); */
     z-index: var(--z-fixed);
+    transition: background-color .2s ease-in-out;
+}
+
+.scrolled {
+    background: #001427;
 }
 
 header a,
 header div {
-    font-family: "Signika", serif;
+    font-family: var(--nav-font);
 }
 
 /* nav */
@@ -92,12 +101,12 @@ header div {
     display: inline-flex;
     align-items: center;
     column-gap: .5rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .nav__logo i {
     font-weight: var(--font-semibold);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .nav__toggle {
@@ -143,15 +152,16 @@ header div {
     }
 
     .nav__list {
-        background-color: var(--firebrick);
+        background-color: var(--background-color);
         /* padding-top: 1rem; */
     }
 }
 
 .nav__link {
     color: var(--off-white);
-    background-color: var(--firebrick);
+    background-color: var(--nav-background);
     font-weight: var(--font-semibold);
+    font-size: var(--normal-font-size);
     padding: 1.25rem 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -159,9 +169,13 @@ header div {
     transition: background-color .3s, color .3s;
 }
 
+.nav__link.scrolled {
+    background-color: var(--background-color);
+}
+
 .nav__link:hover {
-    background-color: var(--firebrick-dark);
-    color: var(--teal-cyan);
+    background-color: var(--nav-background-dark);
+    color: var(--alt-color);
 }
 
 /* show menu */
@@ -198,7 +212,7 @@ header div {
 .dropdown__sublink {
     padding: 1.25rem 1.25rem 1.25rem 2.5rem;
     color: var(--off-white);
-    background-color: var(--firebrick-dark);
+    background-color: var(--nav-background-dark);
     display: flex;
     align-items: center;
     column-gap: .5rem;
@@ -214,8 +228,8 @@ header div {
 
 .dropdown__link:hover,
 .dropdown__sublink:hover {
-    background-color: var(--firebrick);
-    color: var(--teal-cyan);
+    background-color: var(--nav-background);
+    color: var(--alt-color);
 }
 
 .dropdown__menu,
@@ -242,7 +256,7 @@ header div {
 }
 
 .dropdown__sublink {
-    background-color: var(--firebrick-darken)
+    background-color: var(--nav-background-darken)
 }
 
 /* small devices */
