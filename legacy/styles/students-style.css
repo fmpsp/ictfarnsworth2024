@@ -1,0 +1,44 @@
+:root {
+    --margin-xxs: .25rem;
+    --margin-xs: .5rem;
+    --margin-s: .75rem;
+    --margin-m: 1rem;
+    --margin-l: 1.25rem;
+    --margin-xl: 1.75rem;
+    --margin-xxl: 2.5rem;
+    --nav-bg-color: #b44600;
+    --nav-color: #ffcd00;
+    --header-glow: #e25700;
+    --background-1: #004323;
+    --background-2: #146840;
+}
+
+.students-page:before, .contact-page:before {
+    display: none;
+}
+
+.students-section-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3vw;
+}
+
+.students-section-1 h2 {
+    font-family: "Anton Regular";
+    color: var(--header-glow);
+    text-shadow: 2px 4px 20px #222;
+    font-style: italic;
+    font-size: 5vw;
+    text-align: center;
+}
+
+@font-face {
+    font-family: "Knockout Featherweight";
+    src: url("/fonts/Knockout-HTF48-Featherweight.ttf");
+}
+
+@font-face {
+    font-family: "Anton Regular";
+    src: url("/fonts/Anton-Regular.ttf");
+}

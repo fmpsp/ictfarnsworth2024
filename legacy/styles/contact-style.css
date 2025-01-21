@@ -1,0 +1,55 @@
+:root {
+    --margin-xxs: .25rem;
+    --margin-xs: .5rem;
+    --margin-s: .75rem;
+    --margin-m: 1rem;
+    --margin-l: 1.25rem;
+    --margin-xl: 1.75rem;
+    --margin-xxl: 2.5rem;
+    --nav-bg-color: #146840;
+    --nav-color: #ffcd00;
+    --header-glow: #0e9252;
+    --background-1: #b24700;
+    --background-2: #7a380f;
+}
+
+@font-face {
+    font-family: "Knockout Featherweight";
+    src: url("/fonts/Knockout-HTF48-Featherweight.ttf");
+}
+
+@font-face {
+    font-family: "Anton Regular";
+    src: url("/fonts/Anton-Regular.ttf");
+}
+
+.contact-page:before {
+    display: none;
+}
+
+
+.contact-section-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3vw;
+}
+
+.contact-section-1 h2 {
+    font-family: "Anton Regular";
+    color: var(--nav-bg-color);
+    text-shadow: 2px 4px 20px #222;
+    font-style: italic;
+    font-size: 5vw;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    nav ul.active {
+        border-bottom: none;
+    }
+
+    .active-page {
+        margin: 10px 0 0 0;
+    }
+}
