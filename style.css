@@ -101,7 +101,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(150px);
+    transform: translateY(140px);
 }
 
 .slider-navigation .nav-btn {
