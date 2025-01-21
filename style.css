@@ -2,27 +2,14 @@
 @import url('https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css');
 
 :root {
-    --header-height: 2.5rem;
-
     /* colors */
-
     --dark-blue: #001427;
-    --firebrick: #780000;
-    --firebrick-dark: #8d0801;
-    --firebrick-darken: #540b0e;
+    /* --firebrick: #780000; */
+    --teal-cyan: #0ac5f8;
+    --firebrick: rgba(120, 0, 0, 0);
+    --firebrick-dark: (141, 8, 1, 0);
+    --firebrick-darken: (84, 11, 14, 0);
     --off-white: #edf0f1;
-
-    /* font */
-
-    --nav-font: "Signika", serif;   
-    --normal-font-size: .938rem;
-    --font-regular: 400;
-    --font-semibold: 600;
-
-    /* z index */
-
-    --z-tooltip: 10;
-    --z-fixed: 60;
 }
 
 
