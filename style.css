@@ -70,12 +70,25 @@ section {
     text-shadow: 1px 1px 5px #0000006d;
 }
 
+.home .content .h1-small {
+    font-size: 1.5rem;
+    line-height: 0px;
+}
+
 .home .content p {
     margin-bottom: 4em;
     text-shadow: 1px 1px 5px #0000006d;
 }
 
-.home .content a {
+.home .content .tsc-link {
+    color:rgb(55, 186, 32);
+}
+
+.home .content .tsc-link:hover {
+    border-bottom: 2px dotted var(--off-white);
+}
+
+.home .content .highlight-btn {
     background: var(--off-white);
     padding: 15px 35px;
     color: var(--alt-color);
@@ -176,12 +189,17 @@ section {
         margin-bottom: 4vw;
     }
 
+    .home .content .h1-small {
+        font-size: 3vw;
+    }
+    
+
     .home .content p {
-        font-size: 1.8vw;
+        font-size: 3vw;
         margin-bottom: 7vw;
     }
 
-    .home .content a {
+    .home .content .highlight-btn {
         padding: 2vw 4vw;
         font-size: 2vw;
     }
