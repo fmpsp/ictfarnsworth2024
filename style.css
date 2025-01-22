@@ -68,11 +68,10 @@ section {
     line-height: 80px;
     margin-bottom: 20px;
     text-shadow: 1px 1px 5px #0000006d;
-    text-wrap: pretty;
 }
 
 .home .content p {
-    margin-bottom: 65px;
+    margin-bottom: 4em;
     text-shadow: 1px 1px 5px #0000006d;
 }
 
@@ -88,6 +87,8 @@ section {
 
 .home .content .sub-text {
     font-size: .8em;
+    position: relative;
+    top: .5rem;
 }
 
 .home video {
@@ -170,9 +171,19 @@ section {
     }
 
     .home .content h1 {
-        font-size: 3rem;
-        line-height: 50px;
-        margin-bottom: 30px;
+        font-size: 7.5vw;
+        line-height: 7.5vw;
+        margin-bottom: 4vw;
+    }
+
+    .home .content p {
+        font-size: 1.8vw;
+        margin-bottom: 7vw;
+    }
+
+    .home .content a {
+        padding: 2vw 4vw;
+        font-size: 2vw;
     }
 }
 
