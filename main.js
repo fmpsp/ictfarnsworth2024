@@ -38,9 +38,11 @@ document.addEventListener('scroll', () => {
 
 const btns = document.querySelectorAll(".nav-btn");
 const slides = document.querySelectorAll(".video-slide");
-const contents = document.querySelectorAll(".content");
+const contents = document.querySelectorAll(".content"); 
+const rightBtn = document.getElementsByClassName("right-btn");
+let currentSlide = 0;
 
-var sliderNav = function(manual) {
+function removeAllActiveAttributes(){
     btns.forEach((btn) =>  {
         btn.classList.remove("active");
     })
@@ -52,7 +54,10 @@ var sliderNav = function(manual) {
     contents.forEach((content) =>  {
         content.classList.remove("active");
     })
+}
 
+var sliderNav = function(manual) {
+    removeAllActiveAttributes();
 
     btns[manual].classList.add("active");
     slides[manual].classList.add("active");
@@ -62,5 +67,24 @@ var sliderNav = function(manual) {
 btns.forEach((btn, i) => {
     btn.addEventListener("click", () => {
         sliderNav(i);
+        currentSlide = i;
     });
 });
+
+function nextSlide(){
+    if(currentSlide == btns.length - 1){
+        currentSlide = 0;
+    } else {
+        currentSlide++;
+    }
+    sliderNav(currentSlide);
+}
+
+function previousSlide(){
+    if(currentSlide == 0){
+        currentSlide = btns.length - 1;
+    } else {
+        currentSlide--;
+    }
+    sliderNav(currentSlide);
+}
