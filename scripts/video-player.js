@@ -40,6 +40,7 @@ let thumbnail = video_player.querySelector(".thumbnail");
 var videoSource = document.getElementById("id_videoSource");
 
 document.title = "Watching: " + videoList[videoSelected].title;
+window.onload = videoLoadingText.style.display = 'block';
 
 // Hide video and show iframe for Bunga Nila
 if (videoSelected == 0){
