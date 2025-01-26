@@ -4,6 +4,10 @@
 /* reference: https://www.youtube.com/watch?v=ThaIBFd387A */
 /* https://www.youtube.com/watch?v=4oSZzAOpbOw */
 
+@view-transition {
+    navigation: auto;
+}
+
 :root {
     /* colors */
     --background-color: #001427;
@@ -25,3 +29,30 @@ body {
     background-color: var(--background-color);
 }
 /*  */
+
+
+@keyframes blur-in {
+    from {
+        filter: blur(20px);
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    to {
+        filter: blur(0px);
+        transform: scale(1);
+        opacity: 1;
+    }
+  }
+
+  @keyframes blur-out {
+    from {
+        filter: blur(0px);
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        filter: blur(20px);
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
