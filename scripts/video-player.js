@@ -45,6 +45,7 @@ window.onload = videoLoadingText.style.display = 'block';
 // Hide video and show iframe for Bunga Nila
 if (videoSelected == 0){
   videoContainer.style.display = "none";
+  videoLoadingText.style.display = "none";
   iframeVideoSource.style.display = "block";
   iframeVideoSource.setAttribute(
     "src",
@@ -52,6 +53,7 @@ if (videoSelected == 0){
   );
 } else {
   videoContainer.style.display = "block";
+  videoLoadingText.style.display = "block";
   iframeVideoSource.style.display = "none";
   videoSource.setAttribute(
     "src",
@@ -60,11 +62,9 @@ if (videoSelected == 0){
 }
 
 mainVideo.load();
-mainVideo.addEventListener('loadeddata', onVideoLoad())
-
-function onVideoLoad() {
+mainVideo.addEventListener('loadeddata', () => {
   videoLoadingText.style.display = 'none';
-}
+})
 
 // var style_cwst = document.querySelector('[data-css-webkit-slider-thumb="cwst"]');
 
