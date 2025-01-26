@@ -1,7 +1,3 @@
-::view-transition-new(root) {
-    animation: 0.8s ease-in both blur-out;
-}
-
 .home .slide-content {
     text-align: center;
     width: 100%;
