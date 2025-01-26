@@ -428,6 +428,10 @@ section {
     border: none;
   }
 
+  ::view-transition-new(root) {
+    animation: 0.8s ease-in both blur-in;
+}
+
   @media screen and (max-height: 560px){
     .video-title {
         display: none;

@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="TSC 12 ICT - Farnsworth" property="og:site_name" />
+    <meta content="The official website for TSC's 12 ICT - Farnsworth!" property="og:description" />
+    <meta content="https://tscictfarnsworth.icu/" property="og:url" />
+    <meta content="legacy/img/logo.png" property="og:image" />
+    <meta content="#044999" data-react-helmet="true" name="theme-color" />
     <script defer src="scripts/main.js"></script>
     <script defer src="scripts/nav-menu.js"></script>
     <script defer src="scripts/video-player.js"></script>
+    <link rel="shortcut icon" href="legacy/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/nav-style.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/video-player.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <title>TSC ICT Farnsworth</title>
+    <title>Watching: </title>
 </head>
 <body>
     <header class="header" id="header">
@@ -175,7 +181,7 @@
                 </div>
             </div>
         </div>
-        <iframe id="id_iframeVideoSource" allow="autoplay" onload="onVideoLoad()"></iframe>
+        <iframe id="id_iframeVideoSource" allow="autoplay"></iframe>
         <p class="video-loading">loading the video...</p>
     </section>
 </body>
