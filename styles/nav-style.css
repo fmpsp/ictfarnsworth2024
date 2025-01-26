@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: "Knockout Featherweight";
-    src: url("legacy/fonts/Knockout-HTF48-Featherweight.ttf");
+    src: url("../legacy/fonts/Knockout-HTF48-Featherweight.ttf");
 }
 
 :root {
@@ -13,12 +13,13 @@
 
     /* colors */
     --background-color: #001427;
-    --alt-color: #0ac5f8;
-    --nav-background: #B31B1B;
-    --nav-background-dark: #a2211c;
-    --nav-background-darken: #9a2121;
-    --off-white: #edf0f1;
-
+    --alt-color: #0974ef;
+    --nav-color-hover: #ffffff;
+    --nav-background: transparent;
+    --nav-background-dark: transparent;
+    --nav-background-darken: transparent;
+    --off-white: #cecece;
+    --text-shadow: rgb(0, 0, 0, .1) 1px 0 5px;
     /* font */
     --nav-font: "Knockout Featherweight", serif;
     --normal-font-size: 1.25rem;
@@ -64,6 +65,7 @@ header {
     background-color:  var(--nav-background);
     /* box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3); */
     z-index: var(--z-fixed);
+    text-shadow: var(--text-shadow);
     transition: background-color .2s ease-in-out;
 }
 
@@ -174,8 +176,12 @@ header div {
 
 .nav__link:hover {
     background-color: var(--nav-background-dark);
-    color: var(--alt-color);
 }
+
+.nav__link:hover, .dropdown__link:hover, .dropdown__sublink:hover {
+    color: var(--nav-color-hover);
+  }
+
 
 /* show menu */
 .show-menu {
@@ -228,7 +234,6 @@ header div {
 .dropdown__link:hover,
 .dropdown__sublink:hover {
     background-color: var(--nav-background);
-    color: var(--alt-color);
 }
 
 .dropdown__menu,
@@ -296,10 +301,6 @@ header div {
         padding: 0;
         justify-content: initial;
         column-gap: .25rem;
-    }
-
-    .nav__link:hover {
-        background-color: transparent;
     }
 
     .dropdown__item,
